@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import Header from './components/Header';
+import Continents from './components/Continents';
+import Countries from './components/countries/Countries';
+import CountriesByContinent from './components/countriesByContinents/CountriesByContinent';
+import CountrieByName from './components/countriesByName/CountrieByName';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div>
+        <div>
+          <Header />
+        </div>
+        <div>
+          <Continents />
+        </div>
+        <div>
+          <Switch>
+            <Route exact path='/' component={Countries} />
+            <Route path='/:continente' component={CountriesByContinent} />
+            <Route path='/:name' component={CountrieByName} />
+          </Switch>
+        </div>
+      </div>
+    </BrowserRouter>
   );
 }
 
