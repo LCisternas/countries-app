@@ -39,14 +39,14 @@ function App() {
 
   return (
     <BrowserRouter>
-      <div>
-        <div>
+      <div className='main'>
+        <div className='header'>
           <Header setSearchCountrie={setSearchCountrie} />
         </div>
-        <div>
+        <div className='continents'>
           <Continents setContinent={setContinent} />
         </div>
-        <div>
+        <div className='views'>
           <Switch>
             <Route exact path='/' render={() => <Countries setCountrieData={setCountrieData} />} />
             <Route exact path='/continent/:continent' render={() => <CountriesByContinent countriesContinent={countriesContinent} continent={continent} setCountrieData={setCountrieData} />} />

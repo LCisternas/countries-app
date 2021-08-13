@@ -6,7 +6,7 @@ const CountriesList = ({ allCountries, setCountrieData }) => {
 
 
   return (
-    <div>
+    <div className={style.container}>
       {allCountries.map(countrie => (
         <OneCountrie 
           key={countrie.numericCode}

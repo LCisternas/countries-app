@@ -1,0 +1,48 @@
+.container {
+  display: flex;
+  color: white;
+}
+.principal {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 40px;
+}
+.principal h1 {
+  font-size: 48px;
+  margin: 20px 0px;
+}
+.principal img {
+  width: 100%;
+  height: 80%;
+}
+.info {
+  width: 60%;
+  margin-right: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.info h2 {
+  margin-left: 25px;
+  font-size: 32px;
+}
+@media all and (max-width: 541px) {
+  .container {
+    flex-direction: column;
+  }
+  .principal {
+    width: 100%;
+    margin: 0;
+  }
+  .info {
+    width: 100%;
+    margin: 20px 0px;
+  }
+  .info h2 {
+    font-size: 24px;
+    margin: 10px 20px;
+  }
+}

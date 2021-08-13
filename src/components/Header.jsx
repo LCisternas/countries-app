@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import { useHistory, Link } from 'react-router-dom';
+import { ImEarth } from 'react-icons/im'
 
 const Header = ({ setSearchCountrie }) => {
 
@@ -13,9 +14,9 @@ const Header = ({ setSearchCountrie }) => {
   } 
 
   return (
-    <div>
-      <div>
-        <Link to='/'> <h1>Countries App</h1> </Link>
+    <div className='header-container'>
+      <div className='header-title'>
+        <Link to='/'> <ImEarth className='icon' /> <h1>Countries App</h1> </Link>
       </div>
       <form onSubmit={searchByCountrie}>
         <input 

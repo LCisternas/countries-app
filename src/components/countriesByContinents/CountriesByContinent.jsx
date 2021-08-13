@@ -4,8 +4,8 @@ import ContinentList from './ContinentList';
 
 const CountriesByContinent = ({ countriesContinent, continent, setCountrieData }) => {
   return (
-    <div>
-      <h1>{continent}</h1>
+    <div className={style.main}>
+      <div className={style.title}> <h1>{continent}</h1> </div>
       <ContinentList countriesContinent={countriesContinent} setCountrieData={setCountrieData} />
     </div>
   );

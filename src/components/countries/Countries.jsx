@@ -17,7 +17,7 @@ const Countries = ({ setCountrieData }) => {
   }, [])
 
   return (
-    <div>
+    <div className={style.main}>
       <CountriesList allCountries={allCountries} setCountrieData={setCountrieData} />
     </div>
   );
