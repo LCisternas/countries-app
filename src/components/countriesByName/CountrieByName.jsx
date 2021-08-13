@@ -1,9 +1,15 @@
 import React from 'react';
 import style from './index.module.css'
 
-const CountrieByName = () => {
+const CountrieByName = ({ countrieData }) => {
+
+  const { name, flag } = countrieData;
+
   return (
-    <div></div>
+    <div>
+      <h1>{name}</h1>
+      <img src={flag}/>
+    </div>
   );
 }
  

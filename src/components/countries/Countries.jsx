@@ -3,7 +3,7 @@ import axios from 'axios';
 import CountriesList from '../countries/CountriesList';
 import style from './index.module.css'
 
-const Countries = () => {
+const Countries = ({ setCountrieData }) => {
 
   const [allCountries, setAllCountries] = useState([]);
 
@@ -18,7 +18,7 @@ const Countries = () => {
 
   return (
     <div>
-      <CountriesList allCountries={allCountries} />
+      <CountriesList allCountries={allCountries} setCountrieData={setCountrieData} />
     </div>
   );
 }

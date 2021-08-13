@@ -1,13 +1,10 @@
 import React from 'react';
-import OneCountrie from './OneCountrie';
-import style from './index.module.css'
+import OneCountrie from '../countries/OneCountrie';
 
-const CountriesList = ({ allCountries, setCountrieData }) => {
-
-
+const ContinentList = ({ countriesContinent, setCountrieData }) => {
   return (
     <div>
-      {allCountries.map(countrie => (
+      {countriesContinent.map(countrie => (
         <OneCountrie 
           key={countrie.numericCode}
           countrie={countrie}
@@ -18,4 +15,4 @@ const CountriesList = ({ allCountries, setCountrieData }) => {
   );
 }
  
-export default CountriesList;
+export default ContinentList;
